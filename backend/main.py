@@ -6,14 +6,22 @@ from sqlalchemy.orm import Session
 # from backend.models import Note
 # from backend.schemas import NoteCreate, NoteOut
 
+# from fastapi import FastAPI, Depends, HTTPException
+# from fastapi.middleware.cors import CORSMiddleware
+# from sqlalchemy.orm import Session
+
+# # Local imports (correct for Render)
+# from database import Base, engine, SessionLocal
+# from models import Note
+# from schemas import NoteCreate, NoteOut
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-# Local imports (correct for Render)
-from database import Base, engine, SessionLocal
-from models import Note
-from schemas import NoteCreate, NoteOut
+from backend.database import Base, engine, SessionLocal
+from backend.models import Note
+from backend.schemas import NoteCreate, NoteOut
+
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
