@@ -27,3 +27,5 @@ class NoteOut(NoteBase):
     class Config:
         orm_mode = True
 
+        orm_mode = True
+
